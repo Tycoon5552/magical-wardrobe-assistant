@@ -19,7 +19,7 @@ function App() {
     formData.append('image', selectedFile);
 
     try {
-      const res = await axios.post('http://localhost:5000/upload', formData, {
+      const res = await axios.post('https://magical-wardrobe-assistant.onrender.com', formData, {
         headers: { 'Content-Type': 'multipart/form-data' },
       });
       setUploadedFile(res.data.filename);
